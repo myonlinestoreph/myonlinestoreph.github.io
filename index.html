@@ -1,33 +1,3 @@
-<?php
-
-$host="localhost";
-$user="root";
-$password="";
-$db="mvonlinestore";
-
-mysql_connect($host,$user,$password);
-mysql_select_db($db);
-
-if(isset([Username])){
-    
-    $uname=$_POST['Username];
-    $password=$_POST['Password'];
-    
-    $sql="select * from login where username='"$.uname."'AND password='".$password."' limit 1";
-    
-    $result=mysql_query($sql)
-    
-    $if(mysql_num_rows($result))==1){
-        echo "You are successfully log in";
-        exit();
-    }
-    else{
-        echo " You have enter incorrect password";
-        exit();
-    }
-}
-
-?>
 <!DOCTYPE html>
 <html lang="eng">
 <head>
